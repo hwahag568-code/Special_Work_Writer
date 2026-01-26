@@ -92,7 +92,7 @@ def sync_to_github():
     # ▼▼▼▼▼ [여기가 추가된 핵심 코드!] ▼▼▼▼▼
     # 3. 원격 변경사항 가져오기 (Pull)
     print("🔄 서버에 있는 새 파일 가져오는 중 (git pull)...")
-    pull_result = subprocess.call("git pull origin main", shell=True)
+    pull_result = subprocess.call("git pull origin main --no-edit", shell=True)
     
     if pull_result != 0:
         print("⚠️ 주의: Pull 과정에서 충돌이 났거나 병합 메시지 창이 떴을 수 있습니다.")
